@@ -5,7 +5,8 @@ const btnAgregar = document.getElementById("btnAgregar");
 const inputActividad = document.getElementById("actividadInput");
 const listaActividades  = document.getElementById("listaActividades");
 const mensajeVacio = document.getElementById("mensajeVacio");
-
+const year = document.getElementById("year");year.textContent = new Date().getFullYear();
+const contadores = document.getElementById("contadores");
 const totalActividades = document.getElementById("totalActividades");
 const actividadesRealizadas = document.getElementById("totalActividadesRealizadas"); 
 const actividadesPendientes = document.getElementById("totalActividadesPendientes");
@@ -92,5 +93,7 @@ function actualizarContadores(){
    const totalRealizadas = realizadas.length;
    const pendientes = total - totalRealizadas;
 
+   totalActividades.textContent = total;
+   actividadesRealizadas.textContent = totalRealizadas;
+   actividadesPendientes.textContent = pendientes;
 }
-
